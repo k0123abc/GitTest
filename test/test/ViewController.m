@@ -22,6 +22,20 @@
     
     self.view.backgroundColor = [UIColor lightGrayColor];
     
+    //注释1
+    
+    __block int a = 1;
+    
+    void (^block)() = ^void(){
+        
+        //a = 4;
+        
+        NSLog(@"====%d",a);
+    };
+    
+    a = 2;
+    
+    block();
     
 }
 
